@@ -1,0 +1,90 @@
+src; components; **Nome do componente
+
+Sempre que criamos um novo componente devemos exporta-lo para usar na rota:
+importamos no nosso app.js e o usamos assim:
+<div className="App">
+      <h2>Hello World</h2>
+      <FirstComponent />
+    </div>
+
+
+
+JSX "mistura" de js com html como PHP
+
+
+class vira className="";
+
+templates expressions {} servem para executar JS no cod.
+<div className="firstComponent">
+            <p> Primeiro componente</p>
+            {2 + 2}
+        </div>
+
+
+
+função em button com react JSX:
+const AnotherComponent = () => {
+    const handleClick = () => {
+        console.log('CLicou no botão!')
+    }
+
+    return (
+        <div>
+            <p>Segundo Componente</p>
+            <button onClick={handleClick}> Evento de click</button>
+        </div>
+
+
+
+
+
+HOOKS
+import { useState } from "react"
+
+    const [novaIdade, setNovaIdade] = useState(40) invocamos esse Hook para 
+gerencias duas coisas: o acesso ao valor da var novaIdade e a alteração do 
+valor da variável:
+
+
+const Hooks = () => {
+    let idade = 30;
+    const [novaIdade, setNovaIdade] = useState(40)
+    const changeAge = () => {
+        idade = 31
+    }
+    const changeNewAge = () => {
+        setNovaIdade(45)
+    }
+    return (
+        <div>
+            <p>Idade: {idade} </p>
+            <button onClick={changeAge}>Mudar idade</button>
+
+            <p>Nova idade: {novaIdade} </p>
+            <button onClick={changeNewAge}>Mudar nova idade</button>
+        </div>
+
+
+
+
+lista com JSX:
+
+const List = () => {
+    const items = [{
+        id: 1,
+        name: "Willian",    
+    },
+    {
+        id: 2,
+        name: "Bruno"
+    }
+]
+
+    return <div>
+        {items.map((item) => (
+            <p key={item.id}>{item.name}</p>
+        ))}
+    </div>
+}
+
+export default List
