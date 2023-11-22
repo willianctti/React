@@ -88,3 +88,10 @@ const List = () => {
 }
 
 export default List
+
+
+
+
+  <div className='list-todo'>
+          <h2>Lista de tarefas</h2>
+          {todos.length === 0 && <p>Não há tarefas</p>} condiçao con React
